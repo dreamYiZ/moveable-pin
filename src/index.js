@@ -5,10 +5,12 @@ exports.moveablePin = function (el) {
 
   let active =false;
   function preventDefault(e) {
+    console.log('preventDefault active', active);
     if ( active ){
-    }else{
       e.preventDefault();
       return false;
+    }else{
+
     }
   }
   let wheelOpt = { passive: false };
