@@ -41,7 +41,6 @@ exports.moveablePin = function (el) {
   }
 
   function placeDiv(x_pos, y_pos, el, e) {
-    console.log(arguments);
     if (
       x_pos < 0 ||
       y_pos < 0 ||
