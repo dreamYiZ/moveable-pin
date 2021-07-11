@@ -32,7 +32,7 @@ exports.moveablePin = function (el) {
     let touch = e.touches[0];
     placeDiv(
       touch.pageX - e.target.clientWidth / 2,
-      touch.pageY - e.target.clientHeight,
+      touch.pageY - e.target.clientHeight*3/2,
       el
     );
   }
