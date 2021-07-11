@@ -33,14 +33,15 @@ exports.moveablePin = function (el) {
   function drag(e) {
     let touch = e.touches[0];
     placeDiv(
-      touch.pageX - el.clientWidth / 2,
-      touch.pageY - el.clientHeight / 2,
+      touch.clientX - el.clientWidth / 2,
+      touch.clientY - el.clientHeight / 2,
       el,
       e
     );
   }
 
   function placeDiv(x_pos, y_pos, el, e) {
+    console.log(arguments);
     if (
       x_pos < 0 ||
       y_pos < 0 ||
