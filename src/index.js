@@ -1,5 +1,4 @@
 exports.moveablePin = function (el) {
-
   let active = false;
   function preventDefault(e) {
     if (active) {
@@ -30,7 +29,7 @@ exports.moveablePin = function (el) {
     let touch = e.touches[0];
     placeDiv(
       touch.pageX - el.clientWidth / 2,
-      touch.pageY - el.clientHeight*3/2,
+      touch.pageY - el.clientHeight / 2,
       el
     );
   }
