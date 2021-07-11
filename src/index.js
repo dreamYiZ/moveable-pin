@@ -27,11 +27,10 @@ exports.moveablePin = function (el) {
   }
 
   function drag(e) {
-    console.log('el', el)
     let touch = e.touches[0];
     placeDiv(
-      touch.pageX - e.target.clientWidth / 2,
-      touch.pageY - e.target.clientHeight*3/2,
+      touch.pageX - el.clientWidth / 2,
+      touch.pageY - el.clientHeight*3/2,
       el
     );
   }
