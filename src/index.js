@@ -17,6 +17,9 @@ exports.moveablePin = function (el) {
   dragItem.addEventListener("touchend", dragEnd, false);
   dragItem.addEventListener("touchmove", drag, false);
 
+  dragItem.addEventListener("mousedown", dragStart, false);
+  dragItem.addEventListener("mouseup", dragEnd, false);
+  dragItem.addEventListener("mousemove", drag, false);
 
 
   function dragStart(e) {
