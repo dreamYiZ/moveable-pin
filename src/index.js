@@ -49,7 +49,6 @@ exports.moveablePin = function (el) {
     ) {
       return;
     }
-    console.log("placeDiv", arguments);
     el.style.position = "fixed";
     el.style.left = x_pos + "px";
     el.style.top = y_pos + "px";
