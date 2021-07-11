@@ -17,6 +17,8 @@ exports.moveablePin = function (el) {
   dragItem.addEventListener("touchend", dragEnd, false);
   dragItem.addEventListener("touchmove", drag, false);
 
+
+
   function dragStart(e) {
     active = true;
   }
@@ -30,11 +32,21 @@ exports.moveablePin = function (el) {
     placeDiv(
       touch.pageX - el.clientWidth / 2,
       touch.pageY - el.clientHeight / 2,
-      el
+      el,
+      e
     );
   }
 
-  function placeDiv(x_pos, y_pos, el) {
+  function placeDiv(x_pos, y_pos, el, e) {
+    if (
+      x_pos < 0 ||
+      y_pos < 0 ||
+      window.innerHeight < y_pos + el.clientHeight ||
+      window.innerWidth < x_pos + el.clientWidth
+    ) {
+      return;
+    }
+    console.log("placeDiv", arguments);
     el.style.position = "fixed";
     el.style.left = x_pos + "px";
     el.style.top = y_pos + "px";
