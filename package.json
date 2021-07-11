@@ -1,5 +1,5 @@
 {
-  "name": "local-moveable-pin",
+  "name": "moveable-pin",
   "version": "1.0.6",
   "description": "",
   "main": "lib/index.js",
