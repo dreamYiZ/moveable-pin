@@ -1,9 +1,7 @@
 exports.moveablePin = function (el) {
-  console.log("moveablePin el", el);
 
   let active = false;
   function preventDefault(e) {
-    console.log("preventDefault active", active);
     if (active) {
       e.preventDefault();
       return false;
@@ -29,6 +27,7 @@ exports.moveablePin = function (el) {
   }
 
   function drag(e) {
+    console.log('el', el)
     let touch = e.touches[0];
     placeDiv(
       touch.pageX - e.target.clientWidth / 2,
